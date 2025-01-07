@@ -41,29 +41,31 @@ const Navbar = () => {
       <div className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}>
        
         <img
-          src="/fclogo.png"  // Replace with your image path
+          src="/fclogo.png" // Replace with your image path
           alt="Logo"
-          className="w-[100px] lg:w-[120px] h-[auto] object-contain"  // Adjust size as needed
+          className="w-[100px] lg:w-[120px] h-[auto] object-contain" // Adjust size as needed
         />
 
         {/* Show menu items on large screens */}
         <div className="hidden lg:flex items-center gap-[24px]">
-  <ul className="flex gap-12 text-lg mont text-white">
-    <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105 ">HOME</li>
-    <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">ABOUT</li>
-    <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">WHAT WE DO</li>
-    <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">TEAM</li>
-    <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">CONTACT</li>
-  </ul>
-</div>
-<div className="hidden lg:flex items-center gap-[24px]">
-<img
-          src="/rec3.png"
-          alt="menu"
-          className=" hidden w-[70px] h-[70px] object-contain cursor-pointer lg:flex  "
-          onClick={toggleSidebar}
-        />
+          <ul className="flex gap-12 text-lg mont text-white">
+            <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">HOME</li>
+            <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">ABOUT</li>
+            <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">WHAT WE DO</li>
+            <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">TEAM</li>
+            <li className="hover:text-red-500 cursor-pointer mont transition duration-300 ease-in-out transform hover:scale-105">CONTACT</li>
+          </ul>
         </div>
+
+        <div className="hidden lg:flex items-center gap-[24px]">
+          <img
+            src="/rec3.png"
+            alt="menu"
+            className="hidden w-[70px] h-[70px] object-contain cursor-pointer lg:flex"
+            onClick={toggleSidebar}
+          />
+        </div>
+
         {/* Show the menu icon on smaller screens */}
         <img
           src="/menu.svg"
