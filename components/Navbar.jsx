@@ -39,7 +39,6 @@ const Navbar = () => {
     >
       <div className="absolute w-[50%] inset-0 gradient-01" />
       <div className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}>
-       
         <img
           src="/fclogo.png" // Replace with your image path
           alt="Logo"
@@ -84,6 +83,7 @@ const Navbar = () => {
       >
         <div className="p-4 flex flex-col gap-4">
           <button
+            type="button"
             className="text-right text-xl font-bold"
             onClick={toggleSidebar}
           >
