@@ -116,7 +116,7 @@ const OurTeam = () => {
         </button>
 
         {isModalOpen && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-70">
     <div className="bg-white rounded-lg p-4 sm:p-6 w-11/12 max-w-xs sm:max-w-md md:max-w-3/4 lg:max-w-5xl xl:max-w-6xl max-h-[60vh] overflow-auto relative">
       {/* Close Button */}
       <button
