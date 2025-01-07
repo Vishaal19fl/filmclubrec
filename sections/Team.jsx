@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
 import React from 'react';
-import { teamData } from '../constants/teamdata.JS';
+import { teamData } from '../constants/teamdata';
 
 const teamMembers = [
   { 
