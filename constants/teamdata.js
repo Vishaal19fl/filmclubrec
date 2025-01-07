@@ -24,7 +24,7 @@ export const teamData = [
     { domain: 'Direction Lead', name: 'Monish Raja Rathinam M', department: 'AI&DS', year: 3, rollNo: '221801033' },
     { domain: 'Direction Associate', name: 'Shivani B', department: 'BT', year: 2, rollNo: '230401146' },
     { domain: 'Direction Associate', name: 'Vicram', department: 'CSBS', year: 2, rollNo: '231401123' },
-    { domain: 'Direction Associate', name: 'Thandeeshwaran', department: 'ECE', year: null, rollNo: '230801223' },
+    { domain: 'Direction Associate', name: 'Thandeeshwaran', department: 'ECE', year: 2, rollNo: '230801223' },
     {isBreak: true},
     { domain: 'Writing Lead', name: 'Harish', department: 'AIML', year: 3, rollNo: '221501039' },
     { domain: 'Writing Lead', name: 'Livesh', department: 'AIML', year: 3, rollNo: '221501065' },
