@@ -13,7 +13,66 @@
   src: url("/fonts/batmfa__.ttf") format("truetype");
  
 }
+.marquee-section {
+  width: 100%;
+  min-width: 2000px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: -100px;
+  justify-content: center;
+  margin-top: -75px;
+ 
+}
 
+.marquee {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.gallery {
+  display: flex;
+ 
+}
+
+.gallery-item {
+  width: 26vw; /* Adjust width as per your design */
+  height: 100%;
+  margin-right: 20px;
+}
+
+.gallery-image {
+  width: 97%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 768px){
+.marquee-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -45px;
+ 
+}
+.gallery-item {
+  width: 46vw; /* Adjust width as per your design */
+  height: 100%;
+  margin-right: 20px;
+}
+.gallery-image {
+  width: 97%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+}
 .road-rage {
   font-family: "Road Rage", sans-serif;
 }

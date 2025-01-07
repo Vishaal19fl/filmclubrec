@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
+import Marquee from 'react-fast-marquee'
 import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
@@ -15,68 +15,15 @@ const Hero = () => (
       className={`${styles.innerWidth} mx-auto flex flex-col relative z-10`}
     >
       {/* Parallax background layers */}
-      <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className="absolute top-0 left-0 w-full h-full z-0"
-        style={{
-          background: 'url("/background-layer1.png") no-repeat center center',
-          backgroundSize: 'cover',
-          transform: 'translateZ(-2px) scale(3)', // Parallax effect
-        }}
-        whileInView={{ y: ['0px', '20px'] }}  // Consistent px units
-        viewport={{ once: false, amount: 0.2 }}
-      />
-      <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className="absolute top-0 left-0 w-full h-full z-0"
-        style={{
-          background: 'url("/background-layer2.png") no-repeat center center',
-          backgroundSize: 'cover',
-          transform: 'translateZ(-1px) scale(2)',
-        }}
-        whileInView={{ y: ['0px', '10px'] }}  // Consistent px units
-        viewport={{ once: false, amount: 0.25 }}
-      />
-
-      {/* Parallax circles */}
-      <motion.div
-        className="absolute z-0 top-[0%] lg:left-[20%] left-[0%] w-[300px] h-[300px] rounded-full bg-red-400 opacity-5"
-        style={{
-          transform: 'translateZ(-3px) scale(1.5)',
-        }}
-        whileInView={{ y: ['0px', '30px'] }}  // Consistent px units
-        viewport={{ once: false, amount: 0.3 }}
-      />
-      <motion.div
-        className="absolute z-0 top-[15%] right-[10%] w-[250px] h-[250px] rounded-full bg-red-500 opacity-10"
-        style={{
-          transform: 'translateZ(-4px) scale(2)',
-        }}
-        whileInView={{ y: ['0px', '20px'] }}  // Consistent px units
-        viewport={{ once: false, amount: 0.3 }}
-      />
-
-      {/* Parallax arcs */}
-      <motion.div
-        className="absolute z-0 lg:top-[10%] -top-[12%] lg:left-[5%] -left-[16%] w-[500px] h-[500px] bg-transparent border-t-8 border-red-500 rounded-full opacity-20"
-        style={{
-          transform: 'translateZ(-5px) scale(1.2)',
-        }}
-        whileInView={{ y: ['0px', '15px'] }}  // Consistent px units
-        viewport={{ once: false, amount: 0.3 }}
-      />
-     
+      {/* Add your background layers, circles, arcs, etc. */}
 
       <div className="flex justify-center items-center flex-col relative z-10">
-      <motion.h1
-  variants={textVariant(1.1)}
-  className={`${styles.heroHeading1} font-road text-gradient text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9.5xl`}
->
-  REC
-</motion.h1>
-
-
-
+        <motion.h1
+          variants={textVariant(1.1)}
+          className={`${styles.heroHeading1} font-road text-gradient text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9.5xl`}
+        >
+          REC
+        </motion.h1>
 
         <motion.div
           variants={textVariant(1.2)}
@@ -94,7 +41,6 @@ const Hero = () => (
         className="relative w-full lg:-mt-[40px] sm:-mt-[12px]"
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-[40px] z-[0] -top-[30px]" />
-
         <video
           src="/cinema.mp4"  // Replace with your video path
           alt="hero_video"
@@ -105,35 +51,54 @@ const Hero = () => (
           muted
         />
 
-<a href="#explore">
-  <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-    <img
-      src="/roll1.png"
-      alt="stamp"
-      className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain rotate-animation"
-    />
-  </div>
-</a>
-
-<style jsx>{`
-  /* Create the rotation animation */
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  /* Apply the animation to the image */
-  .rotate-animation {
-    animation: rotate 8s linear infinite; /* Rotate every 4 seconds */
-  }
-`}</style>
-
+        <a href="#explore">
+          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
+            <img
+              src="/roll1.png"
+              alt="stamp"
+              className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain rotate-animation"
+            />
+          </div>
+        </a>
       </motion.div>
     </motion.div>
+
+    {/* Marquee Section */}
+    <div className="marquee-section">
+      <Marquee className="marquee" autoFill speed={20}>
+        <div className="gallery">
+          {['/filmevents3.png', '/moviedisc1.png', '/filmworkshops1.png'].map((image, index) => (
+            <div key={index} className="gallery-item">
+              <img
+                src={image}
+                alt=""
+                width={300}
+                height={320}
+                style={{ marginTop: "80px" }}
+                className="gallery-image"
+              />
+            </div>
+          ))}
+        </div>
+      </Marquee>
+    </div>
+
+    <style jsx>{`
+      /* Create the rotation animation */
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Apply the animation to the image */
+      .rotate-animation {
+        animation: rotate 8s linear infinite; /* Rotate every 8 seconds */
+      }
+    `}</style>
   </section>
 );
 
