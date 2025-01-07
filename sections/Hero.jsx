@@ -101,6 +101,7 @@ const Hero = () => (
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-[40px] z-10 relative"
           autoPlay
           loop
+          playsInline
           muted
         />
 
